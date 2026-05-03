@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AlertCircle, RefreshCw, User } from "lucide-react";
 import { useMetrics } from "@/hooks/useMetrics";
@@ -24,7 +24,32 @@ const roleBadge: Record<string, string> = {
   lead: "Tech Lead",
 };
 
-export default function DashboardPage() {
+function DashboardPageFallback() {
+  return (
+    <div className="animate-fade-in flex flex-col gap-9">
+      <div className="flex flex-col justify-between gap-5 border-b border-border pb-7 sm:flex-row sm:items-end">
+        <div>
+          <p className="mb-1 text-xs font-label uppercase tracking-[0.16em] text-muted-foreground">
+            Individual Contributor
+          </p>
+          <div className="h-12 w-72 animate-pulse bg-muted/40" />
+        </div>
+      </div>
+      <div className="h-8 w-56 animate-pulse bg-muted/40" />
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <MetricCardSkeleton key={i} />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 gap-8 pt-1 lg:grid-cols-2">
+        <InterpretationSkeleton />
+        <InterpretationSkeleton />
+      </div>
+    </div>
+  );
+}
+
+function DashboardPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -165,5 +190,13 @@ export default function DashboardPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={<DashboardPageFallback />}>
+      <DashboardPageContent />
+    </Suspense>
   );
 }
