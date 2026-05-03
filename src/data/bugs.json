@@ -1,0 +1,26 @@
+[
+  { "id": "bug_001", "issue_id": "iss_001", "developer_id": "dev_001", "reported_at": "2026-04-10T14:00:00Z", "month": "2026-04" },
+  { "id": "bug_002", "issue_id": "iss_004", "developer_id": "dev_001", "reported_at": "2026-04-20T10:00:00Z", "month": "2026-04" },
+
+  { "id": "bug_003", "issue_id": "iss_011", "developer_id": "dev_001", "reported_at": "2026-05-18T10:00:00Z", "month": "2026-05" },
+
+  { "id": "bug_004", "issue_id": "iss_014", "developer_id": "dev_002", "reported_at": "2026-04-12T11:00:00Z", "month": "2026-04" },
+  { "id": "bug_005", "issue_id": "iss_017", "developer_id": "dev_002", "reported_at": "2026-04-22T14:00:00Z", "month": "2026-04" },
+  { "id": "bug_006", "issue_id": "iss_021", "developer_id": "dev_002", "reported_at": "2026-04-30T10:00:00Z", "month": "2026-04" },
+
+  { "id": "bug_007", "issue_id": "iss_022", "developer_id": "dev_002", "reported_at": "2026-05-10T14:00:00Z", "month": "2026-05" },
+
+  { "id": "bug_008", "issue_id": "iss_034", "developer_id": "dev_003", "reported_at": "2026-04-30T10:00:00Z", "month": "2026-04" },
+
+  { "id": "bug_009", "issue_id": null, "developer_id": "dev_004", "reported_at": "2026-04-15T10:00:00Z", "month": "2026-04" },
+  { "id": "bug_010", "issue_id": "iss_043", "developer_id": "dev_004", "reported_at": "2026-04-25T14:00:00Z", "month": "2026-04" },
+
+  { "id": "bug_011", "issue_id": "iss_047", "developer_id": "dev_004", "reported_at": "2026-05-14T10:00:00Z", "month": "2026-05" },
+  { "id": "bug_012", "issue_id": "iss_049", "developer_id": "dev_004", "reported_at": "2026-05-28T14:00:00Z", "month": "2026-05" },
+
+  { "id": "bug_013", "issue_id": "iss_050", "developer_id": "dev_005", "reported_at": "2026-04-12T10:00:00Z", "month": "2026-04" },
+  { "id": "bug_014", "issue_id": "iss_053", "developer_id": "dev_005", "reported_at": "2026-04-27T11:00:00Z", "month": "2026-04" },
+
+  { "id": "bug_015", "issue_id": "iss_055", "developer_id": "dev_005", "reported_at": "2026-05-12T10:00:00Z", "month": "2026-05" },
+  { "id": "bug_016", "issue_id": "iss_056", "developer_id": "dev_005", "reported_at": "2026-05-20T14:00:00Z", "month": "2026-05" }
+]
